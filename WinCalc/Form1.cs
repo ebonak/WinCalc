@@ -18,6 +18,7 @@ namespace WinCalc
         }
 
 
+        // handler for numeric buttons
         private void button_Click(object sender, EventArgs e)
         {
             if (result.Text == "0")
@@ -27,9 +28,17 @@ namespace WinCalc
             result.Text += b.Text;
         }
 
+
+        // handler for CE button
         private void btnCE_Click(object sender, EventArgs e)
         {
             result.Text = "0";
+        }
+
+        // handler for operator (+-/*) buttons
+        private void operator_click(object sender, EventArgs e)
+        {
+
         }
     }
 }
