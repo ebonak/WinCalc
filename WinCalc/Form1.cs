@@ -20,8 +20,16 @@ namespace WinCalc
 
         private void button_Click(object sender, EventArgs e)
         {
+            if (result.Text == "0")
+                result.Clear();
+
             Button b = (Button)sender;
             result.Text += b.Text;
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            result.Text = "0";
         }
     }
 }

@@ -239,13 +239,14 @@
             this.btnCE.TabIndex = 17;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // result
             // 
-            this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.result.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result.Location = new System.Drawing.Point(12, 12);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(249, 31);
+            this.result.Size = new System.Drawing.Size(249, 32);
             this.result.TabIndex = 18;
             this.result.Text = "0";
             this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
