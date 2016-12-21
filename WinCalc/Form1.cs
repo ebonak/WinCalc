@@ -16,5 +16,12 @@ namespace WinCalc
         {
             InitializeComponent();
         }
+
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            result.Text += b.Text;
+        }
     }
 }
