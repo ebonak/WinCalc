@@ -12,6 +12,10 @@ namespace WinCalc
 {
     public partial class Form1 : Form
     {
+        double value = 0.0;
+        String operation = "";
+        bool operation_pressed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,11 +25,12 @@ namespace WinCalc
         // handler for numeric buttons
         private void button_Click(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if ((result.Text == "0") || (operation_pressed))
                 result.Clear();
 
             Button b = (Button)sender;
             result.Text += b.Text;
+            ;
         }
 
 
@@ -38,7 +43,33 @@ namespace WinCalc
         // handler for operator (+-/*) buttons
         private void operator_click(object sender, EventArgs e)
         {
+            Button b = (Button)sender;
+            operation = b.Text;
+            value = double.Parse(result.Text);
+            operation_pressed = true;
+        }
 
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            switch(operation)
+            {
+                case "+":
+                    result.Text = (value + double.Parse(result.Text)).ToString();
+                    break;
+                case "-":
+                    result.Text = (value - double.Parse(result.Text)).ToString();
+                    break;
+                case "*":
+                    result.Text = (value * double.Parse(result.Text)).ToString();
+                    break;
+                case "/":
+                    result.Text = (value / double.Parse(result.Text)).ToString();
+                    break;
+                default:
+                    MessageBox.Show("Invalid Operator!");
+                    break;
+            }
+            operation_pressed = false;
         }
     }
 }
