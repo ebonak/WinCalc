@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* this is based on a YouTube Tutorial
+ * https://www.youtube.com/watch?v=Is1EHXFhEe4
+ * 
+ * e.bonakdarian dec 2016
+ */
+
 namespace WinCalc
 {
     public partial class Form1 : Form
@@ -30,7 +36,6 @@ namespace WinCalc
 
             Button b = (Button)sender;
             result.Text += b.Text;
-            ;
         }
 
 
@@ -40,18 +45,21 @@ namespace WinCalc
             result.Text = "0";
         }
 
-        // handler for operator (+-/*) buttons
+        // handler for operator (+,-,/,*) buttons
         private void operator_click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
             operation = b.Text;
             value = double.Parse(result.Text);
             operation_pressed = true;
+            equation.Text = value + operation;
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            switch(operation)
+            equation.Text = "";
+
+            switch (operation)
             {
                 case "+":
                     result.Text = (value + double.Parse(result.Text)).ToString();
@@ -70,6 +78,13 @@ namespace WinCalc
                     break;
             }
             operation_pressed = false;
+        }
+
+        // the C button
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            result.Clear();
+            value = 0;
         }
     }
 }

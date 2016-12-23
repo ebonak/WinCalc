@@ -47,6 +47,7 @@
             this.btnC = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.result = new System.Windows.Forms.TextBox();
+            this.equation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -234,6 +235,7 @@
             this.btnC.TabIndex = 16;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnCE
             // 
@@ -256,11 +258,23 @@
             this.result.Text = "0";
             this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // equation
+            // 
+            this.equation.AutoSize = true;
+            this.equation.BackColor = System.Drawing.SystemColors.Window;
+            this.equation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equation.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.equation.Location = new System.Drawing.Point(12, 9);
+            this.equation.Name = "equation";
+            this.equation.Size = new System.Drawing.Size(0, 20);
+            this.equation.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 276);
+            this.Controls.Add(this.equation);
             this.Controls.Add(this.result);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnC);
@@ -311,6 +325,7 @@
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.TextBox result;
+        private System.Windows.Forms.Label equation;
     }
 }
 
