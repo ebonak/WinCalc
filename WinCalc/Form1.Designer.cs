@@ -295,6 +295,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.result);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(294, 314);
+            this.MinimumSize = new System.Drawing.Size(294, 314);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

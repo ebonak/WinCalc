@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /* this is based on a YouTube Tutorial
+ * 
+ * Part I
  * https://www.youtube.com/watch?v=Is1EHXFhEe4
  * 
+ * Part II
+ * https://www.youtube.com/watch?v=o2EVSqquqzc
+ *  implemented first 2 changes: fixed size, and single decimal.
+ *  stopped at t 5:35/22:15
+ *  
  * e.bonakdarian dec 2016
  */
 
@@ -36,7 +43,13 @@ namespace WinCalc
 
             operation_pressed = false;
             Button b = (Button)sender;
-            result.Text += b.Text;
+            if (b.Text == ".")
+            {
+                if (!result.Text.Contains("."))
+                    result.Text += b.Text;
+            }
+            else
+                result.Text += b.Text;
         }
 
 
