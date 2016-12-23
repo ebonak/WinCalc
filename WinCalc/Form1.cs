@@ -34,6 +34,7 @@ namespace WinCalc
             if ((result.Text == "0") || (operation_pressed))
                 result.Clear();
 
+            operation_pressed = false;
             Button b = (Button)sender;
             result.Text += b.Text;
         }
@@ -52,7 +53,7 @@ namespace WinCalc
             operation = b.Text;
             value = double.Parse(result.Text);
             operation_pressed = true;
-            equation.Text = value + operation;
+            equation.Text = value + " " + operation;
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -77,13 +78,12 @@ namespace WinCalc
                     MessageBox.Show("Invalid Operator!");
                     break;
             }
-            operation_pressed = false;
         }
 
         // the C button
         private void btnC_Click(object sender, EventArgs e)
         {
-            result.Clear();
+            result.Text = "0";
             value = 0;
         }
     }

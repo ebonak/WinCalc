@@ -264,7 +264,7 @@
             this.equation.BackColor = System.Drawing.SystemColors.Window;
             this.equation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equation.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.equation.Location = new System.Drawing.Point(12, 9);
+            this.equation.Location = new System.Drawing.Point(14, 14);
             this.equation.Name = "equation";
             this.equation.Size = new System.Drawing.Size(0, 20);
             this.equation.TabIndex = 19;
@@ -275,7 +275,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 276);
             this.Controls.Add(this.equation);
-            this.Controls.Add(this.result);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnEqual);
@@ -294,6 +293,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.result);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
